@@ -9,7 +9,7 @@ def calculo_promedio(nota1, nota2):
     y calcula su promedio.
     '''
     promedio = (nota1 + nota2) / 2
-    print(f"Promedio: {promedio}")
+    return promedio
 
 def principal():
     '''Funcion principal'''
@@ -18,6 +18,7 @@ def principal():
         n1 = int(input("Nota 1: "))
         n2 = int(input("Nota 2: "))
         resultado = calculo_promedio(n1, n2)
+        print(resultado)
         par +=1
     
 if __name__ == "__main__":
