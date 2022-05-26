@@ -1,5 +1,5 @@
 ################
-# Marco - @marcosaccomanno
+# Marco Saccomanno - @marcosaccomanno
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
