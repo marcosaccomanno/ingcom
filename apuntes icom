@@ -1,0 +1,276 @@
+comando [opciones] [argumentos]
+
+corchetes = opcional 
+
+ls -l = permisos / cantidad / usuario dueño / grupo dueño / peso (no del contenido) / fecha modificiacion / nombre
+
+permisos:
+
+drwxrwxr-x
+
+d - directorio
+r - lectura
+w - escritura
+x - ejecucion
+"-" - negacion (nada)
+
+-rw-rw-r--  = usuario / grupo / otros
+
+los permisos van unidos a la propiedad
+no dueño = determinados permisos
+no miembro de grupo = determinados permisos
+
+
+globs (comodines)
+
+* (cero o mas caracteres) completa 
+
+*.jpg /// hola.* /// TP*
+
+? (un caracter cualquiera)
+
+
+****** syncthing
+
+--------------------------------------------------------------------------------------------
+
+variables de entorno
+
+env
+
+--------------------------------------------------------------------------------------------
+
+canalizaciones y redirecciones
+
+comando >archivo (redireccion, muestra la salida del comando en un archivo. Reemplaza el archivo)
+
+comando >>archivo (redireccion, muestra la salida del comando en un archivo. Agrega el comando al archivo anterior, no reemplaza)
+
+comando <archivo (redireccion invertida, el archivo es la entrada del programa)
+
+comando archivo | comando (canalizacion, la salida de un comando (incluyendo sus argumentos) es la entrada de otro comando)
+ej: cat ejemplo.txt | wc
+
+--------------------------------------------------------------------------------------------
+
+wc = cuenta lineas, caracteres y bytes
+
+uniq = descarta lineas duplicadas
+
+sort = ordena
+
+--------------------------------------------------------------------------------------------
+
+STDIN  : entrada /0
+STDOUT : salida hacia consola / 1
+STDERR : salida de errores (por defecto va a STDOUT) / 2 (es salida)
+
+
+comando > /dev/null (elimina)
+
+*la canalizacion ahorra un archivo intermedio (comparado con redirecciones)
+
+"test" toma un valor
+
+~/.bash_rc (se ejecuta al iniciar terminal)
+
+export PATH=$PATH:~/bin
+
+export PS1="prompt"
+
+--------------------------------------------------------------------------------------------
+
+GIT
+
+git clone (descarga una copia de repositorio de Gihub en el directorio actual)
+
+git status (en que estado esta el repositorio - lugar, rama, commits)
+
+git log (historial de repositorio) git log --oneline
+
+git add (actualizar lo que sera confirmado, agrega los cambios al area de preparacion) 
+
+git restore (descartar cambios en el directorio de trabajo) git restore --staged (descarta los cambios del area de preparacion)
+
+git commit (agrega los cambios que estan en el area de preparacion al repositorio local, NO al remoto)
+
+git push (comparte los cambios al repositorio remoto)
+
+git pull (busca los cambios de un repositorio remoto)
+
+git mv (mueve archivos preservando la historia)
+
+gir rm (borra el archivo en la revision actual)
+
+git blame(quien hizo que)
+
+** directorio de trabajo -> git add -> area de preparacion -*> git commit -> repositorio **
+
+--------------------------------------------------------------------------------------------
+
+PYTHON
+
+entrada -> precondiciones -> programa -> postcondiciones -> salida
+
+entrada
+precondiciones (como debe ser la informacion que se ingresa)
+variables
+operaciones (distintos tipos)
+decisiones
+repeticion
+postcondiciones (como tiene que terminar la informacion ingresada)
+salida
+
+la estructura de un algoritmo y el orden de las instrucciones afectan el resultado, son vitales
+
+((entorno thonny xxl)) 
+
+numeros enteros (de cualquier tamaño)
+numeros decimales
+
+variables:
+----------
+
+identificador (variable) = (asignacion) 10 (valor)
+
+si la variable esta del lado izquiero de la asignacion, se la esta declarando
+si la variable esta del lado derecho de la asignacion, esta siendo usada
+
+no se puede asignar valores a constantes
+
+ser descriptivo con los identificadores!!!
+
+snakecase (nombre_variable)
+camelcase (nombreVariable)
+lowercase (nombrevariable)
+uppercase (NOMBREVARIABLE)
+
+excepciones: terminologia matematica (x, y, x, i, j, k, m, n)
+
+nombres de variables:
+
+1. en minuscula
+2. solo de a-z
+3. guiones bajos (snake_case)
+4. descriptivo
+
+
+operaciones:
+------------
+
+x + y o x - y = suma y resta
+x * y = multiplicacion
+x // y = division entera
+x % y = resto (modulo)
+-x = x con signo invertido
+abs(x) = valor absoluto
+pow(x, y) o x ** y = x elevado a la y
+round(x, i) = redondea x a i decimales
+
+'comillas simples permiten comillas "dobles" dentro'
+"comillas dobles permiten comillas 'simples' dentro"
+''' texto preservando saltos de linea '''
+
+los espacios son significativos
+
+len('') = longitud de una secuencia. Da error si no es una secuencia
+
+estos tipos de datos son INMUTABLES, no pueden ser modificados. Cada operacion que manipula un valor inmutable
+genera un nuevo valor inmutable. 
+
+"hola" + "mundo" = concatenacion
+
+f-strings 
+
+numero = 10
+f"hola {numero}" = "hola 10"
+
+
+conversiones de tipos:
+
+se consulta con "type variable"
+
+int()
+float()
+str()
+
+
+comentarios:
+------------
+
+# linea de codigo que no se ejecuta como codigo, para indicar el proposito de algo o para desactivar una linea
+""" docstring """
+
+
+valores logicos:
+
+verdadero o falso (1 0)
+
+comparaciones:
+--------------
+
+m == n
+m != n
+m > n
+m < n
+m >= n
+m <= n
+
+operadores logicos: 
+-------------------
+
+s and p (y)
+s or p (o)
+not s (negacion)
+
+** pass (llena un bloque vacio en asignacion, lazos, if)
+
+if/else caminos excluyentes
+elif 
+
+
+repeticiones:
+-------------
+
+for
+range(max)
+while
+
+se puede detener un lazo con "break" o "continue"
+
+
+funciones:
+----------
+
+def identificador(lista, de, identificadores):
+	pass <- bloque vacio 
+
+def suma(primero, segundo):
+	return primero + segundo <- esto devuelve el resultado
+
+resultado (salida) = suma(uno, dos) (entrada)
+
+
+** mermaid 
+
+
+--------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
